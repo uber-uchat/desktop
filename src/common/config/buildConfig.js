@@ -10,14 +10,14 @@
  *                                          when "enableServerManagement is set to false
  */
 const buildConfig = {
-  defaultTeams: [/*
+  defaultTeams: [
     {
-      name: 'example',
-      url: 'https://example.com'
-    }*/
+      name: 'uChat',
+      url: 'https://uchatx.uberinternal.com'
+    }
   ],
-  helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
-  enableServerManagement: true
+  helpLink: 'https://team.uberinternal.com/pages/viewpage.action?pageId=123151892',
+  enableServerManagement: false
 };
 
 module.exports = buildConfig;
