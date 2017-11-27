@@ -1,5 +1,5 @@
 {
-  "appId": "com.mattermost.desktop",
+  "appId": "com.uchat.desktop",
   "directories": {
     "buildResources": "resources",
     "app": "src",
@@ -22,12 +22,12 @@
   ],
   "protocols": [
     {
-      "name": "Mattermost",
-      "schemes": ["mattermost"]
+      "name": "uChat",
+      "schemes": ["uchat"]
     }
   ],
   "deb": {
-    "synopsis": "Mattermost"
+    "synopsis": "uChat"
   },
   "linux": {
     "category": "InstantMessaging",

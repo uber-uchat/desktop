@@ -1,11 +1,11 @@
 {
-  "name": "mattermost-desktop",
-  "productName": "Mattermost",
-  "desktopName": "Mattermost.desktop",
+  "name": "uchat-desktop",
+  "productName": "uChat",
+  "desktopName": "uChat.desktop",
   "version": "3.7.1",
-  "description": "Mattermost",
+  "description": "uChat",
   "main": "main_bundle.js",
-  "author": "Mattermost, Inc. <feedback@mattermost.com>",
+  "author": "uChat, Inc. <feedback@uchat.com>",
   "homepage": "https://about.mattermost.com",
   "license": "Apache-2.0",
   "dependencies": {
