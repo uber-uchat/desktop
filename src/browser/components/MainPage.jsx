@@ -422,7 +422,7 @@ export default class MainPage extends React.Component {
           ) : null}
         </Grid>
         <TransitionGroup>
-          { (this.state.targetURL === '') ?
+          { (this.props.displayUrlOnHover !== true || this.state.targetURL === '') ?
             null :
             <CSSTransition
               classNames='hovering'
@@ -454,4 +454,5 @@ MainPage.propTypes = {
   showAddServerButton: PropTypes.bool.isRequired,
   requestingPermission: TabBar.propTypes.requestingPermission,
   onClickPermissionDialog: PropTypes.func,
+  displayUrlOnHover: PropTypes.bool.isRequired,
 };
