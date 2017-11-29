@@ -30,6 +30,7 @@ const MainPage = createReactClass({
     showAddServerButton: PropTypes.bool.isRequired,
     requestingPermission: TabBar.propTypes.requestingPermission,
     onClickPermissionDialog: PropTypes.func,
+    displayUrlOnHover: PropTypes.bool.isRequired,
   },
 
   getInitialState() {
@@ -364,7 +365,7 @@ const MainPage = createReactClass({
           { viewsRow }
         </Grid>
         <TransitionGroup>
-          { (this.state.targetURL === '') ?
+          { (this.props.displayUrlOnHover !== true || this.state.targetURL === '') ?
             null :
             <CSSTransition
               classNames='hovering'
