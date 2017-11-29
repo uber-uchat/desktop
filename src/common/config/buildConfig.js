@@ -25,6 +25,7 @@ const buildConfig = {
   helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
   enableServerManagement: true,
   enableAutoUpdater: true,
+  displayUrlOnHover: true,
 };
 
 export default buildConfig;

@@ -193,6 +193,7 @@ ReactDOM.render(
     showAddServerButton={config.enableServerManagement}
     requestingPermission={requestingPermission}
     onClickPermissionDialog={handleClickPermissionDialog}
+    displayUrlOnHover={buildConfig.displayUrlOnHover}
   />,
   document.getElementById('content')
 );
