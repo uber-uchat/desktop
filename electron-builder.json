@@ -47,7 +47,7 @@
   "mac": {
     "category": "public.app-category.productivity",
     "target": [
-      "zip"
+      "dmg"
     ],
     "extraResources": [
       {
@@ -57,6 +57,11 @@
         ]
       }
     ]
+  },
+  "dmg": {
+    "background": "resources/DMG_BG.png",
+    "iconSize": 140,
+    "iconTextSize": 18
   },
   "squirrelWindows": {
     "iconUrl": "file://resources/icon.ico"
