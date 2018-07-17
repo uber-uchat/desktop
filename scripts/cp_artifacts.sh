@@ -10,6 +10,7 @@ cp "${SRC}/Mattermost-${VERSION}-ia32-win.zip" "${DEST}/mattermost-desktop-${VER
 cp "${SRC}/squirrel-windows/Mattermost Setup ${VERSION}.exe" "${DEST}/mattermost-setup-${VERSION}-win64.exe"
 cp "${SRC}/squirrel-windows-ia32/Mattermost Setup ${VERSION}.exe" "${DEST}/mattermost-setup-${VERSION}-win32.exe"
 
+cp "${SRC}/Mattermost-${VERSION}-mac.zip" "${DEST}/mattermost-desktop-${VERSION}-mac.zip"
 cp "${SRC}/Mattermost-${VERSION}.dmg" "${DEST}/mattermost-desktop-${VERSION}.dmg"
 
 cp "${SRC}/mattermost-desktop-${VERSION}.tar.gz" "${DEST}/mattermost-desktop-${VERSION}-linux-x64.tar.gz"
