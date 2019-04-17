@@ -1,6 +1,9 @@
 {
   "appId": "com.mattermost.desktop",
   "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
+  "npmRebuild": true,
+  "nodeGypRebuild":true,
+  "buildDependenciesFromSource": true,
   "directories": {
     "buildResources": "resources",
     "app": "src",
@@ -10,6 +13,7 @@
     "main_bundle.js",
     "browser/**/*{.html,.css,_bundle.js}",
     "assets/**/*",
+    "build/**/*",
     "node_modules/bootstrap/dist/**",
     "node_modules/simple-spellchecker/dict/*.dic"
   ],
