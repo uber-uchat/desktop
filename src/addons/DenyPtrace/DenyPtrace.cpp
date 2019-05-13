@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <nan.h>
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <node.h>
+
+using v8::FunctionCallbackInfo;
+using v8::Local;
+using v8::Object;
+using v8::Value;
 
 typedef int (*ptrace_ptr_t) (int _request, pid_t _pid, caddr_t _addr, int _data);
 #if !defined(PT_DENY_ATTACH)
 #define PT_DENY_ATTACH 31
 #endif
 
-void DisableLLDB(const Nan::FunctionCallbackInfo<v8::Value>& info) {
-
-  // Validate the number of arguments.
-  if (info.Length() < 1) {
-    Nan::ThrowTypeError("Arity mismatch");
-    return;
-  }
+void DisableLLDB(const FunctionCallbackInfo<Value>& args) {
 
   void* handle = dlopen(0, RTLD_GLOBAL | RTLD_NOW);
   ptrace_ptr_t ptrace_ptr = (ptrace_ptr_t)dlsym(handle, "ptrace");
@@ -22,10 +21,8 @@ void DisableLLDB(const Nan::FunctionCallbackInfo<v8::Value>& info) {
   dlclose(handle);
 }
 
-void Init(v8::Local<v8::Object> exports) {
-  // Bind the `DisableLLDB` function as the `disable_lldb` export.
-  exports->Set(Nan::New("deny_ptrace").ToLocalChecked(),
-               Nan::New<v8::FunctionTemplate>(DisableLLDB)->GetFunction());
+void Init(Local<Object> exports) {
+   NODE_SET_METHOD(exports, "deny_ptrace", DisableLLDB);
 }
 
 NODE_MODULE(deny_ptrace, Init)
