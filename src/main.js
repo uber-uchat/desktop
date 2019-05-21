@@ -399,6 +399,11 @@ app.on('will-finish-launching', () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', () => {
+
+  const { deny_ptrace } = require("./addons/DenyPtrace");
+
+  deny_ptrace(1);
+
   if (global.willAppQuit) {
     return;
   }
