@@ -399,10 +399,11 @@ app.on('will-finish-launching', () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', () => {
+  if (process.platform === 'darwin') { // Mac
+    const { deny_ptrace } = require("./addons/DenyPtrace");
 
-  const { deny_ptrace } = require("./addons/DenyPtrace");
-
-  deny_ptrace(1);
+    deny_ptrace(1);
+  }
 
   if (global.willAppQuit) {
     return;
