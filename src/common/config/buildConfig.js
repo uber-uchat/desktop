@@ -23,6 +23,7 @@ const buildConfig = {
     }*/
   ],
   helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
+  internalUrl: 'uchat.uberinternal.com',
   enableServerManagement: true,
   displayUrlOnHover: true,
 };

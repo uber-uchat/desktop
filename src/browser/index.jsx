@@ -188,6 +188,7 @@ ReactDOM.render(
     requestingPermission={requestingPermission}
     onClickPermissionDialog={handleClickPermissionDialog}
     displayUrlOnHover={buildConfig.displayUrlOnHover}
+    internalUrl={buildConfig.internalUrl}
   />,
   document.getElementById('content')
 );
