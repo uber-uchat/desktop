@@ -422,7 +422,7 @@ export default class MainPage extends React.Component {
           ) : null}
         </Grid>
         <TransitionGroup>
-          { (this.props.displayUrlOnHover !== true || this.state.targetURL === '') ?
+          { (this.props.displayUrlOnHover !== true || this.state.targetURL === '' ||(/^(uchat.*).uberinternal.com$/.test(this.props.internalUrl))) ?
             null :
             <CSSTransition
               classNames='hovering'
@@ -455,4 +455,5 @@ MainPage.propTypes = {
   requestingPermission: TabBar.propTypes.requestingPermission,
   onClickPermissionDialog: PropTypes.func,
   displayUrlOnHover: PropTypes.bool.isRequired,
+  internalUrl: PropTypes.bool.isRequired,
 };
